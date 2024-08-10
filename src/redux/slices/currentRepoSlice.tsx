@@ -29,7 +29,7 @@ export const fetchLanguages = createAsyncThunk(
 				headers: {
 					Accept: 'application/vnd.github+json',
 					'X-GitHub-Api-Version': '2022-11-28',
-					// Authorization: `Bearer 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`,
+					// Authorization: `Bearer ${import.meta.env.VITE_URL}`,
 				},
 			})
 
