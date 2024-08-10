@@ -3,11 +3,12 @@ import styles from './RepoDetails.module.scss'
 import { useEffect } from 'react'
 import { fetchLanguages } from '../../redux/slices/currentRepoSlice'
 import { Chip, Stack } from '@mui/material'
+import { AppDispatch } from '../../redux/store'
 
 const RepoDetails = () => {
 	const repoState = useSelector((state: any) => state.currentRepo)
 	const { repo, languages, message, loading } = repoState
-	const dispatch = useDispatch()
+	const dispatch = useDispatch<AppDispatch>()
 	const url: any = repo.languages_url
 
 	useEffect(() => {

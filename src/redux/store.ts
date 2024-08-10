@@ -8,3 +8,5 @@ export const store = configureStore({
 		currentRepo: currentRepoSlice,
 	},
 })
+
+export type AppDispatch = typeof store.dispatch
